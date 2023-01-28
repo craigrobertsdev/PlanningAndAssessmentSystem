@@ -1,0 +1,46 @@
+﻿Planning
+Space or tab, easy to flick through, yearly overview, broken into 4 terms
+Would need term overview
+Need weekly overview
+6 lessons with section before first lesson as admin session
+lesson times and lengths will need to be displayed on a timeline for the day
+ability to email plan to TRT if I will be absent
+
+Appearance:
+smaller box for admin - starting at 8:50-9:10
+2 same sized box for morning - each lasting for 50 minutes
+smaller box for break - lunch for 30 minutes
+2 same sized boxes for middle of day - each for 50 minutes
+smaller box for break - 30 minutes
+2 same sized boxes for end of day - each for 50 minutes
+space for meetings after school - commencing at 3:10 and lasting until 5pm
+
+perhaps add entry for staff meeting. maybe a window that pops up that allows for notes to be taken
+
+yearly and term view broken into subjects
+	display a coloured span over the term when looking at it from the yearly overview, with the topics covered for each subject
+	when looking at it at a term level, coloured span over the appropriate weeks with the specific topics covered for each subject
+	term overview shows planned events (important diary dates). when those are entered in a form, they are automatically populated in the term and week planner
+	term overview goes into more depth about what is being covered in each topic
+
+weekly overview goes into specifics for each day
+
+automatically block out public and school holidays
+
+
+Resource bank:
+store activities organised by subject and topic. potentially could be more specific. 
+example: topic = number and place value. more specific: recognising numbers up to millions
+
+layout:
+header section to choose subject, topic and filter by specifics (or maybe display the specifics in headered sections in the side panel)
+side panel containing a list of the documents that are stored in the database for the selected topic
+main section of screen will display the activity. ability to print the document for use in class
+
+Assessment:
+
+
+
+As a teacher who is required to plan lessons and assess student work
+
+When I look at my 
