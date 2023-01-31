@@ -4,8 +4,7 @@
 
 - [Motivation](#motivation)
 - [Problem Solved](#problem-solved)
-- [Further Information](#coming-soon)
-- [Site Access](#site-access)
+- [Further Information](#further-information)
 
 ## Motivation
 
