@@ -25,5 +25,5 @@ This project aims to do the following:
 <li>Automatically generate report comments based on grades</li>
 </ul>
 
-## Coming Soon
+## Further Information
 Further information about the project will be added (including link to deployed page), will be added as the project develops.
