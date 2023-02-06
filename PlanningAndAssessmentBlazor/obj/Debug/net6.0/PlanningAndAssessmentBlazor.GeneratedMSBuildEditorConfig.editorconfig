@@ -24,6 +24,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Planner/Components/TermPlanner.razor]
+build_metadata.AdditionalFiles.TargetPath = UGxhbm5lclxDb21wb25lbnRzXFRlcm1QbGFubmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Planner/Components/WeekPlanner.razor]
+build_metadata.AdditionalFiles.TargetPath = UGxhbm5lclxDb21wb25lbnRzXFdlZWtQbGFubmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Planner/Components/YearPlanner.razor]
+build_metadata.AdditionalFiles.TargetPath = UGxhbm5lclxDb21wb25lbnRzXFllYXJQbGFubmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

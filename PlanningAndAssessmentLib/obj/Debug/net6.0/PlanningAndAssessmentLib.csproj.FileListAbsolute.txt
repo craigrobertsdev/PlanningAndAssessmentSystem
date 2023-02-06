@@ -1,0 +1,12 @@
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\bin\Debug\net6.0\PlanningAndAssessmentLib.deps.json
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\bin\Debug\net6.0\PlanningAndAssessmentLib.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\bin\Debug\net6.0\PlanningAndAssessmentLib.pdb
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.csproj.AssemblyReference.cache
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.AssemblyInfoInputs.cache
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.AssemblyInfo.cs
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.csproj.CoreCompileInputs.cache
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\refint\PlanningAndAssessmentLib.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.pdb
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\ref\PlanningAndAssessmentLib.dll

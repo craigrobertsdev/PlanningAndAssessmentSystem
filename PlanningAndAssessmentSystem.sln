@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanningAndAssessmentBlazor", "PlanningAndAssessmentBlazor\PlanningAndAssessmentBlazor.csproj", "{C27B8DA8-481C-4D51-B6B2-EF3643F69240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanningAndAssessmentLib", "PlanningAndAssessmentLib\PlanningAndAssessmentLib.csproj", "{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C27B8DA8-481C-4D51-B6B2-EF3643F69240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C27B8DA8-481C-4D51-B6B2-EF3643F69240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C27B8DA8-481C-4D51-B6B2-EF3643F69240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

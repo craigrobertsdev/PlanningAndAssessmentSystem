@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using PlanningAndAssessmentBlazor.Data;
+using PlanningAndAssessmentLib.Data.Curriculum;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddScoped<HttpClient>();
+builder.Services.AddScoped<CurriculumService>();
 
 var app = builder.Build();
 
