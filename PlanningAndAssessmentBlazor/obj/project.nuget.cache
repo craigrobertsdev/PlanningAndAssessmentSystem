@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pRP6gNoMSJptww837BfoGlAZMw/Wv2WtJV3Atp+JOl6LjH+XG1KNhFfd/MCHWXBVxoEHXTnbVBfmpAkfgNB0nw==",
+  "dgSpecHash": "qSwrIwTroEcgI+DcszLoir5q/4YPAmOXMiNAXIobAE68wIKdsIB8Gw1BsE6pgMMoFbcJKTZQgnRqkClR7cAFXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentBlazor\\PlanningAndAssessmentBlazor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\craig\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.5\\microsoft.aspnetcore.authorization.6.0.5.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.5\\microsoft.aspnetcore.components.6.0.5.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.5\\microsoft.aspnetcore.components.analyzers.6.0.5.nupkg.sha512",
@@ -23,6 +25,7 @@
     "C:\\Users\\craig\\.nuget\\packages\\syncfusion.pdfexport.net.core\\20.4.0.44\\syncfusion.pdfexport.net.core.20.4.0.44.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],

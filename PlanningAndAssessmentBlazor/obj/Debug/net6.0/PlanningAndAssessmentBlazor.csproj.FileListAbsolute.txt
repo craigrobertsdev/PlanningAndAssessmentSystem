@@ -46,3 +46,7 @@ C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBla
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.Licensing.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.PdfExport.Net.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\ExcelDataReader.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\ExcelDataReader.DataSet.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll

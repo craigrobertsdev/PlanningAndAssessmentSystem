@@ -1,6 +1,7 @@
 ﻿@inject CurriculumService _curriculumService;
 
 @page "/"
+@using System.Data;
 
 <PageTitle>Planning and Assessment Organiser</PageTitle>
 
@@ -12,6 +13,6 @@
     private string content;
     protected async override Task OnInitializedAsync()
     {
-       
+        await _curriculumService.GetCurriculumData();
     }
 }

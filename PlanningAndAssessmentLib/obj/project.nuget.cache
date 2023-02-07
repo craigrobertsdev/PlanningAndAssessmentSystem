@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Tjwcm7eHQOO1HWdgJuY2KODVNPg3MX9aM+9HVtJaercNVku6Rwmblr7ltgMGn6Z/Q5NrfapAZTk11k2wMhF3cw==",
+  "dgSpecHash": "X9W9Yd0/uYFgmaoKsodmw7cS4u+M+UMlmwgYGeQmLpPcnpvdRawm8hT0EqsC1ksdXExWB+3cIMtOrbyLnoSpng==",
   "success": true,
   "projectFilePath": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\PlanningAndAssessmentLib.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\craig\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
