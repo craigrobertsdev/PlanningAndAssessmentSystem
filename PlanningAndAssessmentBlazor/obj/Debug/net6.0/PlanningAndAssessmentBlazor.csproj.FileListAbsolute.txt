@@ -1,5 +1,4 @@
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\appsettings.json
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\PlanningAndAssessmentBlazor.staticwebassets.runtime.json
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\PlanningAndAssessmentBlazor.exe
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\PlanningAndAssessmentBlazor.deps.json
