@@ -10,6 +10,7 @@
         "dependencies": {
           "ExcelDataReader": "3.6.0",
           "ExcelDataReader.DataSet": "3.6.0",
+          "Syncfusion.DocIO.Net.Core": "20.4.0.49",
           "System.Text.Encoding.CodePages": "7.0.0"
         },
         "runtime": {
@@ -32,6 +33,47 @@
           "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {
             "assemblyVersion": "3.6.0.0",
             "fileVersion": "3.6.0.0"
+          }
+        }
+      },
+      "Syncfusion.Compression.Net.Core/20.4.0.49": {
+        "runtime": {
+          "lib/net6.0/Syncfusion.Compression.Portable.dll": {
+            "assemblyVersion": "20.4600.0.49",
+            "fileVersion": "20.4600.0.49"
+          }
+        }
+      },
+      "Syncfusion.DocIO.Net.Core/20.4.0.49": {
+        "dependencies": {
+          "Syncfusion.Compression.Net.Core": "20.4.0.49",
+          "Syncfusion.Licensing": "20.4.0.49",
+          "Syncfusion.OfficeChart.Net.Core": "20.4.0.49",
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.DocIO.Portable.dll": {
+            "assemblyVersion": "20.4600.0.49",
+            "fileVersion": "20.4600.0.49"
+          }
+        }
+      },
+      "Syncfusion.Licensing/20.4.0.49": {
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "20.4.0.49",
+            "fileVersion": "20.4.0.49"
+          }
+        }
+      },
+      "Syncfusion.OfficeChart.Net.Core/20.4.0.49": {
+        "dependencies": {
+          "Syncfusion.Compression.Net.Core": "20.4.0.49"
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.OfficeChart.Portable.dll": {
+            "assemblyVersion": "20.4600.0.49",
+            "fileVersion": "20.4600.0.49"
           }
         }
       },
@@ -76,6 +118,34 @@
       "sha512": "sha512-miW3sWmPXnLM38YadRIfnhL4W4QZajpS6Q/OqsOpFJU5ct8h+M/fMpbGMm5INtsMP0Y1k0WK0stIfSW3RP31Xg==",
       "path": "exceldatareader.dataset/3.6.0",
       "hashPath": "exceldatareader.dataset.3.6.0.nupkg.sha512"
+    },
+    "Syncfusion.Compression.Net.Core/20.4.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EuwSNUob29srTeF52YOVgG3dEcilnnN4osYZZPBr94Shv2YDjHtOthJ1nbu/gl7objjd0l3+2APusyMT5on/yQ==",
+      "path": "syncfusion.compression.net.core/20.4.0.49",
+      "hashPath": "syncfusion.compression.net.core.20.4.0.49.nupkg.sha512"
+    },
+    "Syncfusion.DocIO.Net.Core/20.4.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RzNfr3FQm6gIaGKjUSJRnMtf7RrOLEZALDsZTfWCXpzmNTzxo6nEs06GJt2/OUT4UPhNvoA2IdIhWN1Lw36mZQ==",
+      "path": "syncfusion.docio.net.core/20.4.0.49",
+      "hashPath": "syncfusion.docio.net.core.20.4.0.49.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/20.4.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JsufJL+jiq4z8tIUv9ad97Ej/5yiWykRw4HyCOtQqrJioZrR4SQoxYfcO7V7p5rt6w7qGssTivAS6M4Dp2AMDQ==",
+      "path": "syncfusion.licensing/20.4.0.49",
+      "hashPath": "syncfusion.licensing.20.4.0.49.nupkg.sha512"
+    },
+    "Syncfusion.OfficeChart.Net.Core/20.4.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O+AjLl8b0Z2mRc0hrBCCQVrXges4Db4q5+f0FNtD9/Km8eECsKyv6S7wPQ8YbgXSWLkPvbkQ4svf8XB2xZD+LA==",
+      "path": "syncfusion.officechart.net.core/20.4.0.49",
+      "hashPath": "syncfusion.officechart.net.core.20.4.0.49.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",

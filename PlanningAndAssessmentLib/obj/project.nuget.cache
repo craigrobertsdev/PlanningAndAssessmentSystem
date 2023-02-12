@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "X9W9Yd0/uYFgmaoKsodmw7cS4u+M+UMlmwgYGeQmLpPcnpvdRawm8hT0EqsC1ksdXExWB+3cIMtOrbyLnoSpng==",
+  "dgSpecHash": "WplOWP/ECAXnLISbq3amWtQgDnTavrsgztkqn5naO2F+tINIdt9YEyvjCQm3BJIifqDHBfMEqt1HG/dJb0nedg==",
   "success": true,
   "projectFilePath": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\PlanningAndAssessmentLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\craig\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\syncfusion.compression.net.core\\20.4.0.49\\syncfusion.compression.net.core.20.4.0.49.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\syncfusion.docio.net.core\\20.4.0.49\\syncfusion.docio.net.core.20.4.0.49.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\syncfusion.licensing\\20.4.0.49\\syncfusion.licensing.20.4.0.49.nupkg.sha512",
+    "C:\\Users\\craig\\.nuget\\packages\\syncfusion.officechart.net.core\\20.4.0.49\\syncfusion.officechart.net.core.20.4.0.49.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\craig\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512"
   ],

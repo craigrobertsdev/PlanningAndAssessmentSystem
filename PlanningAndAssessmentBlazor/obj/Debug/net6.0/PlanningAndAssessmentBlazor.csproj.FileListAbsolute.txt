@@ -50,3 +50,6 @@ C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBla
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\ExcelDataReader.DataSet.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.Compression.Portable.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.DocIO.Portable.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.OfficeChart.Portable.dll
