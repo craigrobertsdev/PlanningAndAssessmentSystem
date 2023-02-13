@@ -52,3 +52,14 @@ C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBla
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.Compression.Portable.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.DocIO.Portable.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Syncfusion.OfficeChart.Portable.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\appsettings.json
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Dapper.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentBlazor\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

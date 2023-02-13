@@ -1,25 +1,34 @@
-﻿namespace PlanningAndAssessmentLib.Data.Curriculum;
-using ExcelDataReader;
-using Microsoft.VisualBasic;
-using PlanningAndAssessmentLib.Models;
-using Syncfusion.DocIO.DLS;
+﻿using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using System.Data;
-using System;
+
+namespace PlanningAndAssessmentLib.Data.Curriculum;
 
 public class CurriculumService
 {
     public List<CurriculumSubject> Subjects { get; set; } = new();
 
-    // Read values from local spreadsheet and add appropriate information to the database if not already populated.
+    // Read values from each curriculum document and add appropriate information to the database if not already populated.
     public void GetCurriculumData()
     {
-        WordDocument document = new();
-        using FileStream stream = File.Open(
-            "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\Data\\ExcelData\\english-curriculum-content-f-6-v9.docx",
-            FileMode.Open,
-            FileAccess.Read
+        string[] files = Directory.GetFiles(
+            "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\Data\\CurriculumFiles"
         );
+
+        foreach (string file in files)
+        {
+            string[] contentArr = LoadFile(file);
+            string? currElements = contentArr.First(x => x.Equals("CURRICULUM ELEMENTS"));
+            int index = Array.IndexOf(contentArr, currElements) + 1;
+
+            Subjects.Add(GetCurriculumSubject(contentArr, index));
+        }
+    }
+
+    private string[] LoadFile(string filePath)
+    {
+        WordDocument document = new();
+        using FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
         document.Open(stream, FormatType.Docx);
 
         // parse entire document into string
@@ -36,10 +45,8 @@ public class CurriculumService
 
         // remove all empty array entires
         contentArr = contentArr.Where(item => !string.IsNullOrEmpty(item)).ToArray();
-        string? currElements = contentArr.First(x => x.Equals("CURRICULUM ELEMENTS"));
-        int index = Array.IndexOf(contentArr, currElements) + 1;
 
-        Subjects.Add(GetCurriculumSubject(contentArr, index));
+        return contentArr;
     }
 
     private CurriculumSubject GetCurriculumSubject(string[] contentArr, int index)

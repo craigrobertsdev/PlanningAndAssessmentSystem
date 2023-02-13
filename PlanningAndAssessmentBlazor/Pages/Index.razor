@@ -1,4 +1,4 @@
-﻿@inject CurriculumService _curriculumService;
+﻿@inject CurriculumService curriculumService;
 
 @page "/"
 @using System.Data;
@@ -14,7 +14,7 @@
     private string content;
     protected async override Task OnInitializedAsync()
     {
-        _curriculumService.GetCurriculumData();
+        curriculumService.GetCurriculumData();
 
 
     }
