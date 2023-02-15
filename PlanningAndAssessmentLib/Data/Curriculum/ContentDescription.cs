@@ -2,7 +2,10 @@
 
 public class ContentDescription
 {
+    public int Id { get; set; }
     public string Description { get; set; }
     public string CurriculumCode { get; set; }
-    public List<string> Elaborations { get; set; } = new();
+    public virtual List<Elaboration> Elaborations { get; set; } = new();
+
+    public virtual Substrand Substrand { get; set; }
 }

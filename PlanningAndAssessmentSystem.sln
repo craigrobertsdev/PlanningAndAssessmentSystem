@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanningAndAssessmentBlazor", "PlanningAndAssessmentBlazor\PlanningAndAssessmentBlazor.csproj", "{C27B8DA8-481C-4D51-B6B2-EF3643F69240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanningAndAssessmentBlazor", "PlanningAndAssessmentBlazor\PlanningAndAssessmentBlazor.csproj", "{C27B8DA8-481C-4D51-B6B2-EF3643F69240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanningAndAssessmentLib", "PlanningAndAssessmentLib\PlanningAndAssessmentLib.csproj", "{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanningAndAssessmentLib", "PlanningAndAssessmentLib\PlanningAndAssessmentLib.csproj", "{D49E9A5F-4FE1-4A4A-8F11-43F243FF1397}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

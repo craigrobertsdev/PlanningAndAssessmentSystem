@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using PlanningAndAssessmentLib.Data.Curriculum;
+using PlanningAndAssessmentLib.DataAccess;
+using PlanningAndAssessmentLib.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<HttpClient>();
 builder.Services.AddScoped<CurriculumService>();
+builder.Services.AddScoped<IDataAccess, SqlDataAccess>();
 
 var app = builder.Build();
 

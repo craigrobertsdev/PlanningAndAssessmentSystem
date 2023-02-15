@@ -1,0 +1,15 @@
+﻿@page "/curriculum"
+
+@using PlanningAndAssessmentLib.Data.Curriculum
+@inject IDataAccess data
+
+<h3>Curriculum</h3>
+
+@code {
+    private List<Subject> subjects = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await data.LoadData();
+    }
+}
