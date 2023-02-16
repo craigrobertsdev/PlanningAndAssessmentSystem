@@ -8,6 +8,7 @@ namespace PlanningAndAssessmentLib.Data.Curriculum;
 public class Elaboration
 {
     public int Id { get; set; }
+    [Required]
     public string Content { get; set; }
 
     public virtual ContentDescription ContentDescription { get; set; }

@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.EntityFrameworkCore;
+using PlanningAndAssessmentLib.Data;
 using PlanningAndAssessmentLib.DataAccess;
 using PlanningAndAssessmentLib.Services;
 
@@ -15,6 +18,13 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<HttpClient>();
 builder.Services.AddScoped<CurriculumService>();
 builder.Services.AddScoped<IDataAccess, SqlDataAccess>();
+builder.Services.AddScoped<CurriculumController>();
+
+var connectionString = builder.Configuration.GetConnectionString("Default");
+builder.Services.AddDbContextFactory<CurriculumContext>(options =>
+{
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 var app = builder.Build();
 

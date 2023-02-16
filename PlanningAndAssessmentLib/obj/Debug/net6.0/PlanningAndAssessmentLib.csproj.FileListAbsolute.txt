@@ -10,3 +10,5 @@ C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\refint\PlanningAndAssessmentLib.dll
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.pdb
 C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\ref\PlanningAndAssessmentLib.dll
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\bin\Debug\net6.0\PlanningAndAssessmentLib.runtimeconfig.json
+C:\Users\craig\source\repos\PlanningAndAssessmentSystem\PlanningAndAssessmentLib\obj\Debug\net6.0\PlanningAndAssessmentLib.genruntimeconfig.cache

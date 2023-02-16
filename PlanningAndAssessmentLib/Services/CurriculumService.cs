@@ -2,15 +2,17 @@
 using Syncfusion.DocIO;
 using System.Data;
 using PlanningAndAssessmentLib.Data.Curriculum;
+using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace PlanningAndAssessmentLib.Services;
 
 public class CurriculumService
 {
-    public List<Subject> Subjects { get; set; } = new();
+    private List<Subject> subjects { get; set; } = new();
 
     // Read values from each curriculum document and add appropriate information to the database if not already populated.
-    public void GetCurriculumData()
+    public List<Subject> GetCurriculumData()
     {
         string[] files = Directory.GetFiles(
             "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\Data\\CurriculumFiles"
@@ -19,11 +21,28 @@ public class CurriculumService
         foreach (string file in files)
         {
             string[] contentArr = LoadFile(file);
-            string? currElements = contentArr.First(x => x.Equals("CURRICULUM ELEMENTS"));
+            Console.WriteLine(file);
+
+            string subjectName = file.Split("C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\Data\\CurriculumFiles\\")[1].Split('-')[0];
+            subjectName = HelperMethods.ToTitleCaseWord(subjectName);
+
+            string currElements = "";
+            foreach (string content in contentArr)
+            {
+                if (content == "CURRICULUM ELEMENTS" || content == "Curriculum Elements" || content == "Curriculum elements")
+                {
+                    currElements= content;
+                    break;
+                }
+            }
+            //currElements = contentArr.First(x => x.Equals("CURRICULUM ELEMENTS") || x.Equals("Curriculum Elements"));
             int index = Array.IndexOf(contentArr, currElements) + 1;
 
-            Subjects.Add(GetCurriculumSubject(contentArr, index));
+            subjects.Add(GetCurriculumSubject(contentArr, subjectName, index));
+
         }
+        
+        return subjects;
     }
 
     private string[] LoadFile(string filePath)
@@ -50,10 +69,11 @@ public class CurriculumService
         return contentArr;
     }
 
-    private Subject GetCurriculumSubject(string[] contentArr, int index)
+    private Subject GetCurriculumSubject(string[] contentArr, string subjectName, int index)
     {
-        Subject subject = new() { Name = "English" };
+        Subject subject = new() { Name = subjectName };
 
+        
         while (index < contentArr.Length)
         {
             YearLevel yearLevel = ParseYearLevel(contentArr, ref index);
@@ -76,13 +96,22 @@ public class CurriculumService
         // capture  year level
         yearLevel.SubjectYearLevel = contentArr[index];
         index += 2;
-        yearLevel.Description = contentArr[index];
+        string description = "";
+
+        do
+        {
+            description += contentArr[index] + "\n\n";
+            index++;
+        }
+        while (!contentArr[index].StartsWith("Achievement standard"));
+        yearLevel.Description = description;
+        index++;
 
         // iterate over next x lines to capture the entire achievement standard
         string achievementStandard = "";
         do
         {
-            achievementStandard += contentArr[index];
+            achievementStandard += contentArr[index] + "\n\n";
             index++;
         } while (!contentArr[index].StartsWith("Strand"));
 
@@ -102,7 +131,7 @@ public class CurriculumService
     {
         Strand strand = new();
         // remove "Strand:" from name
-        strand.Name = contentArr[index].Substring(6);
+        strand.Name = contentArr[index].Substring(8);
         index += 2;
 
         while (contentArr[index].StartsWith("Sub-strand"))
@@ -118,7 +147,7 @@ public class CurriculumService
     {
         Substrand substrand = new();
         // remove "Sub-strand:" from name
-        substrand.Name = contentArr[index].Substring(11);
+        substrand.Name = contentArr[index].Substring(12);
         if (contentArr[index + 1] == "Content descriptions")
         {
             index += 5;
@@ -140,7 +169,7 @@ public class CurriculumService
     private ContentDescription GetContentDescriptions(string[] contentArr, ref int index)
     {
         ContentDescription contentDescription = new();
-        contentDescription.Description = contentArr[index];
+        contentDescription.Description = HelperMethods.ToTitleCaseSentence(contentArr[index]);
         index++;
 
         contentDescription.CurriculumCode = contentArr[index];
@@ -158,3 +187,5 @@ public class CurriculumService
         return contentDescription;
     }
 }
+
+

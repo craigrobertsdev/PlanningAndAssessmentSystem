@@ -3,8 +3,9 @@
 public class Strand
 {
     public int Id { get; set; }
+    [Required]
     public string Name { get; set; }
-    public List<Substrand> Substrands { get; set; } = new();
+    public virtual List<Substrand> Substrands { get; set; } = new();
 
-    public YearLevel YearLevel { get; set; }
+    public virtual YearLevel YearLevel { get; set; }
 }

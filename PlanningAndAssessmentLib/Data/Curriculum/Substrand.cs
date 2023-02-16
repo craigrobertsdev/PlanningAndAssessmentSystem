@@ -3,8 +3,9 @@
 public class Substrand
 {
     public int Id { get; set; }
+    [Required]
     public string Name { get; set; }
-    public List<ContentDescription> ContentDescriptions { get; set; } = new();
+    public virtual List<ContentDescription> ContentDescriptions { get; set; } = new();
 
-    public Strand Strand { get; set; }
+    public virtual Strand Strand { get; set; }
 }
