@@ -24,7 +24,7 @@
     protected async override Task OnInitializedAsync()
     {
         var curriculum = curriculumService.GetCurriculumData();
-        await curriculumController.SaveSubject(curriculum[0]);
+        //await curriculumController.SaveSubject(curriculum[0]);
         done = true;
     }
 }

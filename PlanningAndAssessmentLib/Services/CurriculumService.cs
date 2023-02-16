@@ -17,9 +17,9 @@ public class CurriculumService
         string[] files = Directory.GetFiles(
             "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentLib\\Data\\CurriculumFiles"
         );
-
         foreach (string file in files)
         {
+
             string[] contentArr = LoadFile(file);
             Console.WriteLine(file);
 
@@ -31,16 +31,16 @@ public class CurriculumService
             {
                 if (content == "CURRICULUM ELEMENTS" || content == "Curriculum Elements" || content == "Curriculum elements")
                 {
-                    currElements= content;
+                    currElements = content;
                     break;
                 }
             }
             //currElements = contentArr.First(x => x.Equals("CURRICULUM ELEMENTS") || x.Equals("Curriculum Elements"));
             int index = Array.IndexOf(contentArr, currElements) + 1;
 
-            subjects.Add(GetCurriculumSubject(contentArr, subjectName, index));
 
-        }
+            subjects.Add(GetCurriculumSubject(contentArr, subjectName, index));
+        }                   
         
         return subjects;
     }
@@ -73,28 +73,31 @@ public class CurriculumService
     {
         Subject subject = new() { Name = subjectName };
 
-        
-        while (index < contentArr.Length)
+        try
         {
-            YearLevel yearLevel = ParseYearLevel(contentArr, ref index);
-            yearLevel.Subject= subject;
-            subject.YearLevels.Add(yearLevel);
-            // "Australian Curriculum:" appears after all curriculum content for each subject.
-            if (contentArr[index].StartsWith("Australian Curriculum:"))
+            while (index < contentArr.Length)
             {
-                break;
+                YearLevel yearLevel = ParseYearLevel(contentArr, subjectName, ref index);
+                yearLevel.Subject = subject;
+                subject.YearLevels.Add(yearLevel);
+                // "Australian Curriculum:" appears after all curriculum content for each subject.
+                if (contentArr[index].StartsWith("Australian Curriculum:"))
+                {
+                    break;
+                }
             }
         }
-
+        catch (Exception ex) { Console.WriteLine("Index: " + index); }
         return subject;
     }
 
-    private YearLevel ParseYearLevel(string[] contentArr, ref int index)
+    private YearLevel ParseYearLevel(string[] contentArr, string subjectName, ref int index)
     {
-        YearLevel yearLevel = new();
-
-        // capture  year level
-        yearLevel.SubjectYearLevel = contentArr[index];
+        YearLevel yearLevel = new()
+        {
+            // capture  year level
+            SubjectYearLevel = contentArr[index]
+        };
         index += 2;
         string description = "";
 
@@ -120,10 +123,20 @@ public class CurriculumService
         // continue parsing document until the next line doesn't begin with strand.
         while (contentArr[index].StartsWith("Strand"))
         {
-            Strand strand = GetStrand(contentArr, ref index);
+            Strand strand = new();
+            if (subjectName == "Mathematics")
+            {
+                strand = GetMathsStrand(contentArr, ref index);
+            }
+            else
+            {
+                strand = GetStrand(contentArr, ref index);
+            }
             strand.YearLevel = yearLevel;
             yearLevel.Strands.Add(strand);
+
         }
+        
         return yearLevel;
     }
 
@@ -136,7 +149,8 @@ public class CurriculumService
 
         while (contentArr[index].StartsWith("Sub-strand"))
         {
-            Substrand substrand = GetSubstrand(contentArr, ref index);
+            Substrand substrand = new();
+            substrand = GetSubstrand(contentArr, ref index);
             substrand.Strand = strand;
             strand.Substrands.Add(substrand);
         }
@@ -186,6 +200,32 @@ public class CurriculumService
 
         return contentDescription;
     }
-}
 
+    // Maths is dealt with differently as there are no substrands in the curriculum
+    /*
+     * This function will create a placeholder substrand to keep the object model consistent 
+     * Iterate over the content descriptions and add them the dummy substrand
+     * return the completed strand
+     */
+    private Strand GetMathsStrand(string[] contentArr, ref int index)
+    {
+        Strand strand = new();
+        Substrand substrand = new()
+        {
+            Strand = strand
+        };
+
+        index += 6;
+
+        while (contentArr[index + 1].StartsWith("AC9"))
+        {
+            ContentDescription contentDescription = GetContentDescriptions(contentArr, ref index);
+            contentDescription.Substrand = substrand;
+            substrand.ContentDescriptions.Add(contentDescription);
+        }
+        strand.Substrands.Add(substrand);
+        return strand;
+    }
+
+}
 
