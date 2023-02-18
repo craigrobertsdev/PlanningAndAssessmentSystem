@@ -32,11 +32,25 @@ public class CurriculumController
         return subjects;
     }
 
-    public async Task SaveSubject(Subject subject)
+    public async Task SaveCurriculum(List<Subject> curriculum)
+    {
+        using var context = contextFactory.CreateDbContext();
+        foreach(var subject in curriculum)
+        {
+            await context.Subjects.AddAsync(subject);
+        }
+        context.SaveChanges();
+    }
+
+    public void DeleteCurriculum()
     {
         using var context = contextFactory.CreateDbContext();
 
-        await context.Subjects.AddAsync(subject);
+        foreach(var subject in context.Subjects)
+        {
+            context.Subjects.Remove(subject);
+        }
+
         context.SaveChanges();
     }
 }

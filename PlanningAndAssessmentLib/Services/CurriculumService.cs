@@ -103,7 +103,15 @@ public class CurriculumService
 
         do
         {
-            description += contentArr[index] + "\n\n";
+            if (contentArr[index].StartsWith("*"))
+            {
+                description += contentArr[index] + "\n";
+            }
+            else
+            {
+                description += contentArr[index] + "\n\n";
+            }
+
             index++;
         }
         while (!contentArr[index].StartsWith("Achievement standard"));
@@ -170,6 +178,8 @@ public class CurriculumService
         {
             index++;
         }
+
+        // each time GetContentDescriptions returns, check whether the next line starts with AC9 (instead of another header) and repeat if so.
         while (contentArr[index + 1].StartsWith("AC9"))
         {
             ContentDescription contentDescription = GetContentDescriptions(contentArr, ref index);
@@ -210,6 +220,8 @@ public class CurriculumService
     private Strand GetMathsStrand(string[] contentArr, ref int index)
     {
         Strand strand = new();
+        strand.Name = contentArr[index].Substring(8);
+
         Substrand substrand = new()
         {
             Strand = strand

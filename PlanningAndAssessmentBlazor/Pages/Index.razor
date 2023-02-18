@@ -1,13 +1,14 @@
-﻿@inject CurriculumService curriculumService;
+﻿@page "/"
+
+@inject CurriculumService curriculumService;
 @inject CurriculumController curriculumController;
 
-@page "/"
 @using System.Data;
 @using PlanningAndAssessmentLib.Services;
 @using Syncfusion.DocIO.DLS;
-    using PlanningAndAssessmentLib.Services;
 
 <PageTitle>Planning and Assessment Organiser</PageTitle>
+
 
 @if (done)
 {
@@ -16,15 +17,14 @@
 
 <PlanningAndAssessmentBlazor.Planner.Components.YearPlanner></PlanningAndAssessmentBlazor.Planner.Components.YearPlanner>
 
-@*<p>@content</p>*@
 
 @code {
     private bool done = false;
+    List<Subject> Curriculum = new();
 
     protected async override Task OnInitializedAsync()
     {
-        var curriculum = curriculumService.GetCurriculumData();
-        //await curriculumController.SaveSubject(curriculum[0]);
-        done = true;
+        
     }
+
 }
