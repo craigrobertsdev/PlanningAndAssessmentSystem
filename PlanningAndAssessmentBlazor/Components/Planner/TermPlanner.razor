@@ -19,11 +19,14 @@ Option to set reminders for follow ups in advance of the day.*@
         <div class="col-start-3 row-start-1 text-center border border-slate-300">Wednesday</div>
         <div class="col-start-4 row-start-1 text-center border border-slate-300">Thursday</div>
         <div class="col-start-5 row-start-1 text-center border border-slate-300">Friday</div>
+        <CascadingValue Value=@this>
         @for (int i = 0; i < NumWeeks; i++)
         {
             <TermPlannerRow WeekStartDate=@(StartDate.AddDays(i * 7)) WeekNumber=@(i + 1) />
         }
+        </CascadingValue>
     </div>
+
 </div>
 
 @code {
@@ -35,9 +38,8 @@ Option to set reminders for follow ups in advance of the day.*@
     public DateTime StartDate { get; set; }
     [Parameter]
     public DateTime EndDate { get; set; }
-
     private string gridRows;
-
+    internal TermDayCell selectedCell = new();
     protected override void OnInitialized()
     {
         string rows = "";
@@ -45,6 +47,11 @@ Option to set reminders for follow ups in advance of the day.*@
         {
             rows += "1fr_";
         }
+    }
+
+    internal void RefreshState()
+    {
+        StateHasChanged();
     }
 
 }

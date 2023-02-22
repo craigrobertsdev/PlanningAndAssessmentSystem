@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Components/Planner/Event.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQbGFubmVyXEV2ZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Components/Planner/SubjectRow.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQbGFubmVyXFN1YmplY3RSb3cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Components/Planner/TermDayCell.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQbGFubmVyXFRlcm1EYXlDZWxsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,10 +62,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Shared/Button.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJ1dHRvbi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/Shared/SubjectRow.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1YmplY3RSb3cucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/craig/source/repos/PlanningAndAssessmentSystem/PlanningAndAssessmentBlazor/_Imports.razor]

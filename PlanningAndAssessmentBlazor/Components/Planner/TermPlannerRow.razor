@@ -1,57 +1,52 @@
-﻿
+﻿<div class="row-start-@(WeekNumber + 1) col-start-@(1)">
+    <TermDayCell StartDate=@(WeekStartDate) @ref=cell1 OnClick=@(()=>SelectCell(cell1))/>
+</div>
+<div class="row-start-@(WeekNumber + 1) col-start-@(2)">
+    <TermDayCell StartDate=@(WeekStartDate.AddDays(1)) @ref=cell2 OnClick=@(()=>SelectCell(cell2)) />
+</div>
+<div class="row-start-@(WeekNumber + 1) col-start-@(3)">
+    <TermDayCell StartDate=@(WeekStartDate.AddDays(2)) @ref=cell3 OnClick=@(()=>SelectCell(cell3)) />
+</div>
+<div class="row-start-@(WeekNumber + 1) col-start-@(4)">
+    <TermDayCell StartDate=@(WeekStartDate.AddDays(3)) @ref=cell4 OnClick=@(()=>SelectCell(cell4)) />
+</div>
+<div class="row-start-@(WeekNumber + 1) col-start-@(5)">
+    <TermDayCell StartDate=@(WeekStartDate.AddDays(4)) @ref=cell5 OnClick=@(()=>SelectCell(cell5)) />
+</div>
 
-    <div class="row-start-@(WeekNumber + 1) col-start-@(1)">
-        <TermDayCell StartDate=@(WeekStartDate) @ref=cell1 OnClick=@(()=>SelectCell(cell1))/>
-    </div>
-    <div class="row-start-@(WeekNumber + 1) col-start-@(2)">
-        <TermDayCell StartDate=@(WeekStartDate.AddDays(1)) @ref=cell2 OnClick=@(()=>SelectCell(cell2)) />
-    </div>
-    <div class="row-start-@(WeekNumber + 1) col-start-@(3)">
-        <TermDayCell StartDate=@(WeekStartDate.AddDays(2)) @ref=cell3 OnClick=@(()=>SelectCell(cell3)) />
-    </div>
-    <div class="row-start-@(WeekNumber + 1) col-start-@(4)">
-        <TermDayCell StartDate=@(WeekStartDate.AddDays(3)) @ref=cell4 OnClick=@(()=>SelectCell(cell4)) />
-    </div>
-    <div class="row-start-@(WeekNumber + 1) col-start-@(5)">
-        <TermDayCell StartDate=@(WeekStartDate.AddDays(4)) @ref=cell5 OnClick=@(()=>SelectCell(cell5)) />
-    </div>
 
 @code {
     [Parameter]
     public DateTime WeekStartDate { get; set; }
     [Parameter]
     public int WeekNumber { get; set; }
-
+    [CascadingParameter]
+    public TermPlanner? ParentPlanner { get; set; }
     private TermDayCell? cell1;
     private TermDayCell? cell2;
     private TermDayCell? cell3;
     private TermDayCell? cell4;
     private TermDayCell? cell5;
 
-    private TermDayCell? selectedCell;
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender)
-        {
-
-        }
-    }
 
     private void SelectCell(TermDayCell cell)
     {
-        if (selectedCell == cell)
+        // If user clicks already selected cell, deselect it.
+        if (ParentPlanner.selectedCell == cell)
         {
-            cell.isSelected = !cell.isSelected;
-            selectedCell = cell;
+            cell.IsSelected = false;
+            ParentPlanner.selectedCell = null;
         }
         else
         {
-            if (selectedCell != null) selectedCell.isSelected = false;
-            cell.isSelected = true;
-            selectedCell = cell;
+            // set the currently selected cell to false before changing to the newly selected one
+            if (ParentPlanner.selectedCell != null) ParentPlanner.selectedCell.IsSelected = false;
+
+            cell.IsSelected = true;
+            ParentPlanner.selectedCell = cell;
 
         }
-        Console.WriteLine(selectedCell.StartDate);
+        // Update parent state with newly selected cell
+        ParentPlanner.RefreshState();
     }
 }
