@@ -1,0 +1,28 @@
+﻿@*This component is responsible for displaying a single day in the term planner. It will display within the cell a date and the list of events that are 
+happening on that school day, with no overflow.
+
+When selected, it will change colour and if double clicked, the user will be able to add a new event to the cell.
+*@
+<div class="border border-slate-200 focus:border focus:border-2 h-full" @ref=cell @onclick=@OnClick>
+    <p class="text-xs">@(StartDate.ToString("dd/M"))</p>
+    @foreach(var schoolEvent in Events) {
+        <div class="border-black"> 
+            @isSelected
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public DateTime StartDate { get; set; }
+    [Parameter]
+    public List<SchoolEvent> Events { get; set; } = new();
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    private ElementReference cell;
+
+
+    // TODO - implement behaviour for when the cell is selected per above.
+    internal bool isSelected = false;
+}

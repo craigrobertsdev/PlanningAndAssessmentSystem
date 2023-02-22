@@ -17,7 +17,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<HttpClient>();
 builder.Services.AddScoped<CurriculumService>();
-builder.Services.AddScoped<IDataAccess, SqlDataAccess>();
 builder.Services.AddScoped<CurriculumController>();
 
 var connectionString = builder.Configuration.GetConnectionString("Default");

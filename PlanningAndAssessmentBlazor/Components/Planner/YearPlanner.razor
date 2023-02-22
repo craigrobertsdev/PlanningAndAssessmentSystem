@@ -1,0 +1,69 @@
+﻿<h1>@CurrentYearLevel</h1>
+@*
+    This component will be laid out in 4 rows, 1 for each term.
+    Within each row, the user will be able to add a row by selecting from the subjects within the curriculum.
+    When the row is created, the user will be presented with the option to add substrands (or strands in the 
+    case of maths) to the row. These topics will be what become available on the month planner page. 
+
+    They should be stored in a list of objects that has a subjects which only contain the appropriate
+    strands/substrands, and the term that the object relates to
+
+
+
+*@
+
+<div class="grid grid-cols-2 grid-rows-2 border h-full mb-1" id="year-planner">
+    
+    @*Term 1*@
+   <div class="col-start-1 row-start-1 grid grid-rows-2">
+       <div class="row-start-1">Term 1</div>
+       <div class="row-start-2 table">
+            @if(selectedSubjects.Count == 0)
+            {
+                <SubjectRow Subject=null/>
+            }
+            @foreach(var subject in Subjects)
+            {
+                
+            }
+       </div>
+   </div>
+</div>
+
+
+<Button OnClickCallback="AddSubject">Add Subject</Button>
+<Button OnClickCallback="ToggleEdit">@editButtonContent</Button>
+
+
+@code {
+    [Parameter]
+    public List<Subject> Subjects { get; set; }
+
+    [Parameter]
+    public string CurrentYearLevel { get; set; }
+    
+    private List<Subject> selectedSubjects = new();
+
+    private bool edit = false;
+    private string editButtonContent;
+
+    protected override void OnInitialized()
+    {
+        editButtonContent = edit ? "Save" : "Edit";
+    }
+
+    private void ToggleEdit()
+    {
+        edit = !edit;
+
+        editButtonContent = edit ? "Save" : "Edit";
+    }
+
+    private void AddSubject()
+    {
+                
+    }
+}
+
+
+

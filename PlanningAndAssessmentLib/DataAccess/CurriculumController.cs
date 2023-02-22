@@ -17,6 +17,7 @@ public class CurriculumController
     }
 
     // Loads the entire curriculum including all subset data
+    //public async Task<List<Subject>> GetCurriculum()
     public List<Subject> GetCurriculum()
     {
         using var context = contextFactory.CreateDbContext();

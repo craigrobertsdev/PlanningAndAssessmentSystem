@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N9daozYADZvElfpcahq3oJcV6h5bkBWoY0J7pLdq6lk=",
+  "Hash": "k5XJ7gmLfe79k2I7RaadrSQiXXM7F98m1ZgdI5Hc87s=",
   "Source": "PlanningAndAssessmentBlazor",
   "BasePath": "_content/PlanningAndAssessmentBlazor",
   "Mode": "Default",
@@ -1732,40 +1732,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
-    },
-    {
-      "Identity": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-      "SourceId": "PlanningAndAssessmentBlazor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentBlazor\\wwwroot\\",
-      "BasePath": "_content/PlanningAndAssessmentBlazor",
-      "RelativePath": "css/bootstrap/bootstrap.min.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
-      "SourceId": "PlanningAndAssessmentBlazor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentBlazor\\wwwroot\\",
-      "BasePath": "_content/PlanningAndAssessmentBlazor",
-      "RelativePath": "css/bootstrap/bootstrap.min.css.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
       "Identity": "C:\\Users\\craig\\source\\repos\\PlanningAndAssessmentSystem\\PlanningAndAssessmentBlazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",

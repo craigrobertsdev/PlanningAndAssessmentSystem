@@ -1,0 +1,75 @@
+﻿@*Will need to look like a 5 day per week calendar and the week numbers runnning along the side of the table. 
+Each cell will be selectable and will display:
+    Date
+    Any event for the day (SchoolEvent object)
+    Times for the event 
+
+When the event is selected, it can have notes added to it or have a link to permission forms etc
+Option to set reminders for follow ups in advance of the day.*@
+<div class="flex mb-3 pt-2 pl-2 gap-0.5" style="border-bottom: 1px solid black">
+    <Button>Term 1</Button>
+    <Button>Term 2</Button>
+    <Button>Term 3</Button>
+    <Button>Term 4</Button>
+</div>
+<div class="flex flex-col grow">
+    <div class="h-full grid grid-cols-[1fr_1fr_1fr_1fr_1fr_2%] grid-rows-[max-content_@(gridRows)] border" >
+        <div class="col-start-1 row-start-1 text-center border border-slate-300">Monday</div>
+        <div class="col-start-2 row-start-1 text-center border border-slate-300">Tuesday</div>
+        <div class="col-start-3 row-start-1 text-center border border-slate-300">Wednesday</div>
+        <div class="col-start-4 row-start-1 text-center border border-slate-300">Thursday</div>
+        <div class="col-start-5 row-start-1 text-center border border-slate-300">Friday</div>
+        @for (int i = 0; i < NumWeeks; i++)
+        {
+            <TermPlannerRow WeekStartDate=@(StartDate.AddDays(i * 7)) WeekNumber=@(i + 1) />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int TermNumber { get; set; }
+    [Parameter]
+    public int NumWeeks { get; set; }
+    [Parameter]
+    public DateTime StartDate { get; set; }
+    [Parameter]
+    public DateTime EndDate { get; set; }
+
+    private string gridRows;
+
+    protected override void OnInitialized()
+    {
+        string rows = "";
+        for (int i = 0; i < NumWeeks; i++)
+        {
+            rows += "1fr_";
+        }
+    }
+
+}
+@*
+<table class="col-start-1 h-100 border-collapse border border-slate-500 w-full">
+    <thead>
+        <tr>
+            <th class="border border-slate-500">Monday</th>
+            <th class="border border-slate-500">Tuesday</th>
+            <th class="border border-slate-500">Wednesday</th>
+            <th class="border border-slate-500">Thursday</th>
+            <th class="border border-slate-500">Friday</th>
+        </tr>
+    </thead>
+    @for (int i = 0; i < NumWeeks; i++)
+    {
+        <TermPlannerRow WeekStartDate=@(StartDate.AddDays(i * 7)) WeekNumber=@(i + 1) />
+    }
+</table>
+<table class="col-start-2">
+    @for (int i = 0; i <= NumWeeks; i++)
+    {
+
+        <tr>
+            <WeekNumberCell WeekNumber=@i />
+        </tr>
+    }
+</table>*@

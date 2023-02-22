@@ -1,0 +1,56 @@
+﻿@page "/planner"
+@using PlanningAndAssessmentBlazor.Components.Planner
+@using PlanningAndAssessmentBlazor.Components;
+@using PlanningAndAssessmentLib.Data.Curriculum
+@inject CurriculumController curriculumController
+
+<div class="h-full flex flex-col">
+    <DynamicComponent Type="@currentPlanner" Parameters="@parameters[currentPlanner.Name].GetParameterDictionary()" />
+</div>
+
+
+
+@code {
+    private List<Subject>? subjects = new();
+    private Type currentPlanner = typeof(TermPlanner);
+    private Dictionary<string, ComponentParameters> parameters = new();
+    public List<TermModel> TermModels { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        subjects = curriculumController.GetCurriculum();
+        parameters = new()
+        {
+            {
+                nameof(YearPlanner),
+                new YearPlannerParameters
+                {
+                    CurrentYearLevel = "Year 5",
+                    Subjects = subjects
+                }
+            },
+            {
+                nameof(TermPlanner),
+                new TermPlannerParameters
+                {
+                    NumWeeks = 10,
+                    StartDate = new DateTime(2023, 1, 30),
+                    EndDate = new DateTime(2023, 4, 14)
+                }
+            },
+            {
+                nameof(WeekPlanner),
+                new WeekPlannerParameters
+                {
+                    
+                }
+            }
+
+        };
+    }
+
+    private void OnDropdownChange(ChangeEventArgs e)
+    {
+        currentPlanner = e.Value?.ToString()?.Length > 0 ? Type.GetType($"PlanningAndAssessmentBlazor.Components.Planner.{e.Value}") : null;
+    }
+}
