@@ -26,4 +26,4 @@ This project aims to do the following:
 </ul>
 
 ## Further Information
-Further information about the project will be added (including link to deployed page), will be added as the project develops.
+Further information about the project (including link to deployed page), will be added as the project develops.
